@@ -15,3 +15,4 @@ variable "public_subnets" {
     type    = list(any)
     default = ["10.25.101.0/24", "10.25.102.0/24", "10.25.103.0/24"]
 }
+

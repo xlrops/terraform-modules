@@ -6,7 +6,7 @@ module "vpc" {
 
     azs             = local.azs
     private_subnets = var.private_subnets
-    public_subnets  = var.public_subnets
+    public_subnets = var.public_subnets
 
     enable_dns_hostnames = true
 
@@ -18,12 +18,13 @@ module "vpc" {
     single_nat_gateway     = true
     one_nat_gateway_per_az = false
 
-    public_subnet_tags = {
-        Name = "${var.app_name}-public"
-    }
 
     private_subnet_tags = {
         Name = "${var.app_name}-private"
+    }
+
+    public_subnet_tags = {
+        Name = "${var.app_name}-public"
     }
 
     tags = {
