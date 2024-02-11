@@ -115,3 +115,4 @@ prism-api:1.29.0-10
 configuration-as-code:1775.v810dc950b_514
 amazon-ecs:1.49
 authentication-tokens:1.53.v1c90fd9191a_b_
+job-dsl:1.87
