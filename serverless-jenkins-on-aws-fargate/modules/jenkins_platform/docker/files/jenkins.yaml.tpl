@@ -88,44 +88,14 @@ jobs:
                       }
                   }
                   stages {
-			  stage('Build') {
-                        steps {
-                            script {
-                                sh "echo this was executed on a spot instance"
-                            }
-                            sh '''
-                                terraform version
-                            '''
-                            sh 'sleep 5'
-                            sh 'echo sleep is done'
-                        }
-                    }
                     stage('Test') {
                         steps {
                             script {
-                                sh "echo this was executed on a spot instance"
+                                sh "echo this was executed on main instance"
                             }
-                            sh '''
-                                terraform version
-                            '''
-                            sh 'sleep 5'
+                            sh 'sleep 120'
                             sh 'echo sleep is done'
                         }
-                    }
-                    stage('Deploy') {
-                        steps {
-                            script {
-                                sh "echo this was executed on a spot instance"
-                            }
-                            sh '''
-                                terraform version
-                            '''
-                            sh 'sleep 5'
-                            sh 'echo sleep is done'
-                        }
-                    }
-                        }
-
                     }
                   }
               }'''.stripIndent())
