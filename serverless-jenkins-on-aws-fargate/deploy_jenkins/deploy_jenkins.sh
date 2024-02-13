@@ -17,14 +17,13 @@ terraform init \
 if [ "$1" == "plan" ]; then
     terraform plan \
         -lock=false \
-        -input=false \
-        -out=tf.plan
+        -input=false
 
 elif [ "$1" == "apply" ]; then
     terraform plan \
 	-lock=false \
         -input=false \
-        -out=tf.plan	
+        -out=tf.plan
 
     terraform apply \
         -input=false \
